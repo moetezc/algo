@@ -1,0 +1,24 @@
+ALGORITHM check1
+VAR
+    str : STRING ;
+    char-count,vowel-count,words-count,i : INTEGER ;
+BEGIN
+    read(str);
+FOR i FROM 0 TO length(str)-1 STEP 1 DO
+ char-count:=0;
+IF (str[i]<>' ' and str[i]<>'.') THEN
+ char-count:= char-count+1 ;
+END_IF
+ words-count := 1;
+ IF (str[i]=' ') THEN
+  words-count:= word-count + 1 ;
+END_IF
+ vowel-count:= 0;
+  IF (uppercase str[i] = ['A','E','O','U','I']) THEN
+  countV := countV+1 ;
+END_IF
+END_FOR
+  write("number of charachters: " ,char-count);
+  write("number of vowels : " ,vowel-count);
+  write("number of words : " ,words-count);
+END
